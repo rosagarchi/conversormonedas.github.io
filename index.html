@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Conversor Monedas</title>
+</head>
+<body class="content-flex-column-center">
+    <h1>Conversor de Monedas</h1>
+    <div class="container">
+    <section class="main content-flex-column-center">
+        <div class="card content-flex-column-center suavizado-borde">
+            <p>Pesos CLP</p>
+            <input type="number" min="0" placeholder="Ingrese Monto" class="inputs texto-centrado suavizado-borde" id="input-monto">
+            <div class="select-container">
+            <p>Moneda a convertir</p>
+                <select id="select-monedas" class="inputs suavizado-borde texto-centrado texto-up-center">
+                    <option value="non">Seleccione moneda</option>
+                    <option value="dolar">Dolar</option>
+                    <option value="euro">Euro</option>
+                </select>
+            </div>
+            <button class="btn-buscar suavizado-borde" id="btn-buscar" onclick="calcularTipoCambio()">Buscar</button>
+            <section class="resultados" id="resultados">
+                <p class="text-resultado">Resultado: </p><p class="text-resultado texto-up-center" id="output-monto"></p>
+            </section>
+            
+        </div>
+    </section>
+    </div>
+    <div style="width: 500px;">
+        <canvas id="area-grafico"  width="400" height="200"></canvas>
+    </div>
+        
+    
+</body>
+    <script defer src="./assets/js/moneda.js"></script>
+</html>
